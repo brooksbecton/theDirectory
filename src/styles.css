@@ -1,0 +1,185 @@
+/* You can add global styles to this file, and also import other style files */
+   .add_comment {
+       cursor: pointer;
+       text-align: center;
+   }
+   html, body {
+       margin: 0;
+       height: 100%;
+       font-family: 'Lato', sans-serif;
+       padding-top: 25px;
+   }
+   #bottom_container {
+       padding-bottom: 40px;
+       padding-left: 0px;
+       padding-right: 0px;
+       padding-top: 20px;
+   }
+   .breadcrumb {
+       background-color: #C0C0C0;
+   }
+   .center {
+       float: none;
+       margin-left: auto;
+       margin-right: auto;
+       width: default;
+   }
+   footer{
+       background-color: gainsboro;
+       height: 200px;
+       margin-top: 40px;
+       padding-left: 10vw; 
+       padding-right: 10vw; 
+   }
+   ul.columns-2 {
+       list-style-position: inside;
+   }
+   .github-repo{
+       float: right;
+   }
+   hr {
+       border-top: 1px solid #8A8A8A;
+   }
+   .nav>li>a:hover {
+       background-color: transparent;
+   }
+   .nav li {
+       line-height: 33px;
+   }
+   .navbar-brand {
+       -webkit-transition-duration: 1s;
+       -moz-transition-duration: 1s;
+       -o-transition-duration: 1s;
+       transition-duration: 1s;
+       -webkit-transition-property: -webkit-transform;
+       -moz-transition-property: -moz-transform;
+       -o-transition-property: -o-transform;
+       transition-property: transform;
+       outline: 0;
+   }
+   .navbar-brand:target {
+       -webkit-transform: rotate(180deg);
+       -ms-transform: rotate(180deg);
+       transform: rotate(180deg);
+   }
+   .navbar {
+       margin-bottom: 20px;
+       padding: 5px;
+       width: 100%;
+   }
+   #navBrand {
+       width: 16px;
+   }
+   .navigator {
+       padding-left: 0px;
+       padding-right: 0px;
+   }
+   .navbar-right{
+    margin-right: 0px;
+   }
+   #navbarToggle:focus {
+       background-color: transparent;
+   }
+   #navbarToggle:hover {
+       background-color: #FFF;
+   }
+   #navbarToggle.toggleInit {
+       -ms-transform: rotate(180deg);
+       /* IE 9 */
+       
+       -webkit-transform: rotate(180deg);
+       /* Chrome, Safari, Opera */
+       
+       transform: rotate(180deg);
+   }
+   #navbarToggle.toggleNormal {
+       animation: flip .4s;
+       -ms-transform: rotate(180deg);
+       /* IE 9 */
+       
+       -webkit-transform: rotate(180deg);
+       /* Chrome, Safari, Opera */
+       
+       transform: rotate(180deg);
+   }
+   #navbarToggle.toggleFlipped {
+       animation: reverse-flip .4s;
+       -ms-transform: rotate(0deg);
+       /* IE 9 */
+       
+       -webkit-transform: rotate(0deg);
+       /* Chrome, Safari, Opera */
+       
+       transform: rotate(0deg);
+   }
+   pre {
+       background-color: #FFF;
+       border: 0px;
+       font-family: 'Lato', sans-serif;
+       font-size: inherit;
+       font-style: italic;
+       padding: 0px;
+       white-space: pre-wrap;
+   }
+   #primary_links {
+       font-size: 1em;
+   }
+   #projects-nav {
+       background-color: #F8F8F8;
+       border: 1px solid;
+       border-color: #e7e7e7;
+       border-radius: 4px;
+       float: left;
+       padding: 8px;
+   }
+   #projects-nav li {
+       padding-bottom: 20px;
+   }
+   #projects-nav ul {
+       list-style-type: none;
+       padding-left: 0px;
+   }
+   .project-body h2 {
+       margin-top: 0px;
+   }
+   @keyframes flip {
+       0% {
+           transform: rotate(0deg);
+       }
+       100% {
+           transform: rotate(180deg);
+       }
+   }
+   @keyframes reverse-flip {
+       0% {
+           transform: rotate(180deg);
+       }
+       100% {
+           transform: rotate(0deg);
+       }
+   }
+   .resources li {
+       padding-top: 10px;
+   }
+   .firefox-width-fix img {
+       width: 100%;
+   }
+   @media only screen and (max-width: 768px) {
+       p {
+           font-size: 12px;
+       }
+       ul {
+           padding-left: 10px;
+       }
+       #primary_links {
+           font-size: 12px;
+       }
+       .navbar-default .navbar-collapse,
+       .navbar-default .navbar-form {
+           border-color: #F8F8F8;
+       }
+       .projects-nav {
+           background-color: #FFF;
+           border: 0px;
+       }
+   }

@@ -1,0 +1,39 @@
+{
+    "klikit": {
+        "desc": "Klikit is a web based quiz application. Our goal was to make a quiz app that provides instant response to users. If a user got added to a quiz or class they would know instantly. Also, as students take their quizzes or polls the instructor would be able to watch answers as they come in.\nKlikit takes advantages of many technologies that allow us to provide a simple and snappy experience for our users. For front end development, Klikit uses AngularJS 1 and Angular Material. AngularJS's two-way binding allows us to watch variables and change them on the front in to give instant feedback. Our backend is built on NodeJS and Express. Firebase is used to store our quiz data and provide federated authentication.",
+        "components": [
+            "AngularJS 1",
+            "Angular Material",
+            "NodeJS",
+            "Express",
+            "Google Firebase",
+            "HTML",
+            "CSS"
+        ],
+        "githubLink": "//github.com/brooksbecton/clickIt",
+        "name": "Klikit",
+        "link": "//klikit.herokuapp.com/",
+        "futurePlans": [
+            "User and Instructor Dashboard",
+            "Multiple Types of Quizzes"
+        ]
+    },
+    "the-directory": {
+        "desc": "I created this site as a place to compile a list of resources for me and others. I also use this site to link to my other projects, thus the name \"The Directory.\" I particularly proud of the navigation bar of this site. It took a lot of work to get Bootstrap and Angular JS to play nice because of some of the anchors tags used typically in Bootstrap's Nav component.",
+        "components": [
+            "HTML",
+            "CSS",
+            "Twitter Bootstrap",
+            "JavaScript",
+            "TypeScript",
+            "AngularJS 2",
+            "PHP",
+            "JSON"
+        ],
+        "githubLink": "//github.com/brooksbecton/theDirectory",
+        "name": "The Directory",
+        "link": "//www.utm.edu/students/broabect/",
+        "futurePlans": [
+        ]
+    }
+}

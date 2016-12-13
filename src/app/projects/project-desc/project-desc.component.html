@@ -1,0 +1,36 @@
+<div id="carousel" class="col-sm-12 pull-right carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel" data-slide-to="1"></li>
+        <li data-target="#carousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner firefox-width-fix" role="listbox">
+        <div class="item active">
+            <img class="center" src="assets/images/orange-leaves.jpg" alt="Blue stars of mountain">
+        </div>
+    </div>
+</div>
+<div class="col-xs-12" id="bottom_container">
+    <projects-nav></projects-nav>
+    <div class="col-sm-8 project-body">
+        <h2>
+            <a href="{{project.link}}" target="_blank">{{project.name | capitalize}}</a>
+            <a [hidden]="!project.githubLink" href="{{project.githubLink}}" target="_blank"><i aria-label="Github Repo" class="github-repo fa fa-github fa-lg" aria-hidden="true"></i></a>
+        </h2>
+        <hr>
+        <h3><strong>Description:</strong></h3>
+        <p>{{project.desc}}</p>
+        <div class="col-sm-6">
+            <h3><strong>Components:</strong></h3>
+            <ul *ngFor="let compenent of project.components">
+                <li>{{compenent}}</li>
+            </ul>
+        </div>
+        <div class="col-sm-6">
+            <h3><strong>Future Plans:</strong></h3>
+            <ul *ngFor="let plan of project.futurePlans">
+                <li>{{plan}}</li>
+            </ul>
+        </div>
+    </div>
+</div>
