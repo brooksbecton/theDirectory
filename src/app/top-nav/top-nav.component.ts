@@ -1,5 +1,8 @@
-import { Component } from '@angular/core'
-declare var $:JQueryStatic;
+import { Component } from '@angular/core';
+
+import { Auth } from '../auth.service';
+
+declare var $: JQueryStatic;
 
 
 @Component({
@@ -9,7 +12,7 @@ declare var $:JQueryStatic;
 
 export class TopNavComponent {
     flipped: boolean;
-    constructor() {
+    constructor(private auth: Auth) {
         this.flipped = true;
     }
 
@@ -19,7 +22,7 @@ export class TopNavComponent {
     */
     isActive = function (viewLocation: string) {
         console.log("window.location.pathname: " + window.location.pathname);
-        console.log('viewLocation: ' + viewLocation); 
+        console.log('viewLocation: ' + viewLocation);
         return viewLocation == window.location.pathname;
     };
 

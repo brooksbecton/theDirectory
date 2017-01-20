@@ -17,6 +17,8 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="//www.linkedin.com/in/brooksbecton" target="_blank"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a></li>
+                <button class="btn btn-primary btn-margin" (click)="auth.login()" *ngIf="!auth.authenticated()">Log In</button>
+                <button class="btn btn-primary btn-margin" (click)="auth.logout()" *ngIf="auth.authenticated()">Log Out</button>
             </ul>
         </div>
     </div>
