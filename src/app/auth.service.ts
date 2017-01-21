@@ -58,7 +58,6 @@ export class Auth {
   }
 
   public isAdmin() {
-    console.log(this.userProfile);
     return this.userProfile && this.userProfile.appMetadata
       && this.userProfile.appMetadata.roles
       && this.objIndexOf(this.userProfile.appMetadata.roles, 'admin');

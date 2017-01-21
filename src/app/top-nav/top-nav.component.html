@@ -8,17 +8,17 @@
         </div>
         <div class="collapse navbar-collapse" id="navigationbar">
             <ul class="nav navbar-nav">
-                <li><a routerLink="/resources" routerLinkActive="active">Resources</a>
+                <li><a routerLink="/resources" routerLinkActive="active">Resources</a></li>
+                <li><a routerLink="/utilities" routerLinkActive="active">Utilities</a></li>
+                <li><a routerLink="/projects" routerLinkActive="active">Projects</a></li>
+                <li>
+                    <a (click)="auth.login()" *ngIf="!auth.authenticated()">Log In</a>
+                    <a (click)="auth.logout()" *ngIf="auth.authenticated()">Log Out</a>
                 </li>
-                <li><a routerLink="/utilities" routerLinkActive="active">Utilities</a>
-                </li>
-                <li><a routerLink="/projects" routerLinkActive="active">Projects</a>
-                </li>
+                <li><a routerLink="projects/admin" *ngIf="auth.isAdmin()">Admin</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="//www.linkedin.com/in/brooksbecton" target="_blank"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a></li>
-                <button class="btn btn-primary btn-margin" (click)="auth.login()" *ngIf="!auth.authenticated()">Log In</button>
-                <button class="btn btn-primary btn-margin" (click)="auth.logout()" *ngIf="auth.authenticated()">Log Out</button>
             </ul>
         </div>
     </div>
