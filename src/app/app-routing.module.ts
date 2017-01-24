@@ -5,6 +5,7 @@ import { NotFoundComponent } from './404/NotFound.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ProjectsAdminComponent } from './projects/admin/admin.component'
 import { ProjectDescComponent } from './projects/project-desc/project-desc.component';
+import { ProjectEditComponent } from './projects/project-edit/project-edit.component';
 import { ResourcesComponent } from './resources/resources.component';
 import { UtilitiesComponent } from './utilities/utilities.component';
 import { WelcomeComponent } from './welcome/welcome.component';
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'projects', component: ProjectsComponent },
   { path: 'projects/admin', component: ProjectsAdminComponent, canActivate:[AuthGuard] },
   { path: 'projects/:project-name', component: ProjectDescComponent },
+  { path: 'projects/:project-name/edit', component: ProjectEditComponent, canActivate:[AuthGuard]  },
   { path: 'resources', component: ResourcesComponent },
   { path: 'utilities', component: UtilitiesComponent },
   { path: '**', redirectTo: '/404' }

@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
+import { Auth } from './../../auth.service'
 import { Project } from '../project'
 import { ProjectNavComponent } from '../nav/projects-nav.component'
 import { ProjectService } from '../projects.service'
@@ -15,10 +16,11 @@ export class ProjectDescComponent {
 
   projects: Project[]
   projectNameParameter: string = "";
-  project: Object = {};
+  project: Project = new Project;
   private sub: any;
 
   constructor(
+    private auth: Auth,
     private projectService: ProjectService,
     private route: ActivatedRoute,
     private router: Router
@@ -29,6 +31,10 @@ export class ProjectDescComponent {
       this.projectNameParameter = params['project-name'];
       this.loadProjects()
     });
+  }
+
+  editProject() {
+    this.router.navigateByUrl('projects/' + this.project.name + '/edit');
   }
 
   loadProjects() {
@@ -50,8 +56,7 @@ export class ProjectDescComponent {
       this.project = projects[newProject];
     }
     else {
-    this.router.navigate(['404']); // here "About" is name not path
-
+      this.router.navigate(['404']);
     }
   }
 

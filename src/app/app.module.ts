@@ -18,6 +18,7 @@ import { TopNavComponent } from './top-nav/top-nav.component';
 import { UtilitiesComponent } from './utilities/utilities.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { ProjectsAdminComponent } from './projects/admin/admin.component';
+import { ProjectEditComponent } from './projects/project-edit/project-edit.component';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { ProjectsAdminComponent } from './projects/admin/admin.component';
     UtilitiesComponent,
     WelcomeComponent,
     ProjectsAdminComponent,
+    ProjectEditComponent,
   ],
   providers: [
     Auth,
