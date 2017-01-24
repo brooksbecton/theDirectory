@@ -29,7 +29,10 @@ export class ProjectDescComponent {
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
       this.projectNameParameter = params['project-name'];
-      this.loadProjects()
+      this.projectService.getProject(this.projectNameParameter)
+      .subscribe(newProject => {
+        this.setCurrentProject(newProject);
+      });
     });
   }
 
@@ -37,23 +40,13 @@ export class ProjectDescComponent {
     this.router.navigateByUrl('projects/' + this.project.name + '/edit');
   }
 
-  loadProjects() {
-    this.projectService.getProjects()
-      .subscribe(
-      projects => this.setCurrentProject(projects, this.projectNameParameter),
-      err => {
-        console.log(err);
-      });
-  }
-
   ngOnDestroy() {
     this.sub.unsubscribe();
   }
 
-  setCurrentProject(projects: Object, newProject: string) {
-    //If we have information for the requested project
-    if (projects[newProject]) {
-      this.project = projects[newProject];
+  setCurrentProject(newProject: Project) {
+    if (newProject) {
+      this.project = newProject;
     }
     else {
       this.router.navigate(['404']);
